@@ -30,7 +30,7 @@ export const Pagination3 = () => {
     return (
         <>
             {data.length !== 0 ? ( //data is preset then show this
-                <div className="flex justify-center mx-auto py-2 mb-20 px-20 md:px-40  ">
+                <div className="flex justify-center mx-auto py-2 mb-20  md:px-40  ">
                     {/* show the post here */}
                     {currentData.map((item, idx) => (
                         <div key={idx}>
@@ -39,9 +39,9 @@ export const Pagination3 = () => {
                     ))}
 
                     {/* previous and next button */}
-                    <div className="flex justify-between  space-x-10 mt-10  w-full">
+                    <div className="flex justify-between  mt-10 px-3 w-full">
                         <button
-                        className=" rounded-xl px-4 py-3 bg-blue-900 text-white focus:ring hover:bg-blue-800 md:p-2 md:text-xs lg:p-2 lg:text-lg xl:p-4 xl:text-xl 2xl:p-6 2xl:text-5xl"
+                        className=" rounded-xl px-1 py-1 bg-blue-900 text-white focus:ring hover:bg-blue-800 md:p-2 md:text-xs lg:p-2 lg:text-lg xl:p-4 xl:text-xl 2xl:p-6 2xl:text-5xl"
                         onClick={() => {
                             if (currentPage > 1) {
                             setCurrentPage(currentPage - 1);
@@ -60,8 +60,8 @@ export const Pagination3 = () => {
                                 }}
                                 className={
                                 PageNumber === currentPage
-                                    ? " rounded-xl p-6 px-6 text-white bg-blue-800 focus:ring hover:bg-blue-800 hidden cursor-pointer md:mx-1 md:p-2 md:text-xs lg:mx-1 lg:p-2 lg:text-lg xl:p-4  xl:text-xl xl:mx-2 2xl:p-6 2xl:text-5xl 2xl:mx-4" //this css when selcted
-                                    : "rounded-xl p-6 px-6 text-white bg-blue-900 focus:ring hover:bg-blue-800 hidden cursor-pointer md:mx-1 md:p-2 md:text-xs lg:mx-1 lg:p-2 lg:text-lg xl:p-4  xl:text-xl xl:mx-2 2xl:p-6 2xl:text-5xl 2xl:mx-4"
+                                    ? " rounded-xl p-1 px-1 text-white bg-blue-800 focus:ring hover:bg-blue-800  cursor-pointer md:mx-1 md:p-2 md:text-xs lg:mx-1 lg:p-2 lg:text-lg xl:p-4  xl:text-xl xl:mx-2 2xl:p-6 2xl:text-5xl 2xl:mx-4" //this css when selcted
+                                    : "rounded-xl p-1 px-1 text-white bg-blue-900 focus:ring hover:bg-blue-800  cursor-pointer md:mx-1 md:p-2 md:text-xs lg:mx-1 lg:p-2 lg:text-lg xl:p-4  xl:text-xl xl:mx-2 2xl:p-6 2xl:text-5xl 2xl:mx-4"
                                 }
                             >
                                 {PageNumber}
@@ -69,7 +69,7 @@ export const Pagination3 = () => {
                             ))}
                         </div>
                         <button
-                        className="rounded-xl px-4 py-3 bg-blue-900 text-white focus:ring hover:bg-blue-800 md:p-2 md:text-xs lg:p-2 lg:text-lg xl:p-4 xl:text-xl 2xl:p-6 2xl:text-5xl"
+                        className="rounded-xl px-1 py-1 bg-blue-900 text-white focus:ring hover:bg-blue-800 md:p-2 md:text-xs lg:p-2 lg:text-lg xl:p-4 xl:text-xl 2xl:p-6 2xl:text-5xl"
                         onClick={() => {
                             if (currentPage < pageNumbers.length) {
                             setCurrentPage(currentPage + 1);
