@@ -3,7 +3,7 @@ import "./Styles/Styles.css";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Search } from "./components/Search/Search";
 import { Footer } from "./components/Footer/Footer";
-import { CardData } from "./components/Cards/CardData";
+import { CardData2 } from "./components/Cards/CardData2";
 
 
 
@@ -16,7 +16,7 @@ const App = () => {
   
         {/* <ClickableCard/> */}
         {/* <DataGrid/> */}
-        <CardData/>
+        <CardData2/>
         {/* <Click/> */}
         
         {/* <Exams /> */}

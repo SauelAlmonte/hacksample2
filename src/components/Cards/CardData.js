@@ -72,20 +72,20 @@ export const CardData = () => {
 
   {/*Checking the device width to determine the number of columns and rows to display the data.*/}
   const deviceWidth = window.innerWidth;
-let numColumns, numRows;
-if (deviceWidth >= 1024) {
-  // Desktop layout
-  numColumns = 4;
-  numRows = 8;
-} else if (deviceWidth >= 768 && deviceWidth < 1024) {
-  // Tablet layout
-  numColumns = 2;
-  numRows = 6;
-} else {
-  // Mobile layout
-  numColumns = 1;
-  numRows = 8;
-}
+  let numColumns, numRows;
+  if (deviceWidth >= 1024) {
+    // Desktop layout
+    numColumns = 4;
+    numRows = 8;
+  } else if (deviceWidth >= 768 && deviceWidth < 1024) {
+    // Tablet layout
+    numColumns = 3;
+    numRows = 6;
+  } else {
+    // Mobile layout
+    numColumns = 1;
+    numRows = 8;
+  }
 
   {/*Reduce the data rows of data based on the number of columns specified. This function takes two arguments, an array of data and the number of columns to display, and returns a new array of data with a reduced number of rows.*/}
   const reducedData = reduceRows(currentData, numColumns).slice(0, numRows);
